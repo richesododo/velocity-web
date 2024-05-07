@@ -23,7 +23,7 @@ function Login() {
   const handleSignIn = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5500/login", {
+      const response = await axios.post("http://54.208.65.82:5500/login", {
         email: formData.email,
         password: formData.password,
       });
@@ -49,7 +49,7 @@ function Login() {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5500/signup",
+        "http://54.208.65.82:5500/signup",
         formData
       );
       console.log("Signup Success:", response.data);

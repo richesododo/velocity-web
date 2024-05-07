@@ -15,7 +15,7 @@ const Sport = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:5500/items/sport");
+      const response = await axios.get("http://54.208.65.82:5500/items/sport");
       setProducts(response.data);
       setLoading(false);
     } catch (error) {
