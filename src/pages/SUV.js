@@ -11,7 +11,7 @@ const SUV = () => {
   useEffect(() => {
     const fetchSUVs = async () => {
       try {
-        const response = await axios.get("http://54.208.65.82:5500/items/suv");
+        const response = await axios.get("https://velocity-api-six.vercel.app/items/suv");
         setSUVs(response.data);
         setLoading(false);
       } catch (error) {
@@ -32,7 +32,7 @@ const SUV = () => {
         return;
       }
       await axios.post(
-        "http://54.208.65.82:5500/cart",
+        "https://velocity-api-six.vercel.app/cart",
         { itemId: suvId, qty: 1 },
         { headers: { Authorization: `Bearer ${token}` } }
       );
