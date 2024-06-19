@@ -22,7 +22,7 @@ const Showcart = () => {
     const userId = localStorage.getItem("userId");
     try {
       const response = await axios.get(
-        `http://54.208.65.82:5500/cart/${userId}`,
+        `https://velocity-api-six.vercel.app/cart/${userId}`,
         config
       );
       setCartItems(response.data);
