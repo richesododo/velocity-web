@@ -1,0 +1,64 @@
+/* Container holding all product cards */
+.Products div {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Creates as many 300px wide columns as can fit in the container */
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Centers the grid within the container if there's extra space */
+  padding: 20px; /* Padding around the entire container */
+}
+
+/* Individual viewer/card styles */
+.viewer {
+  border: 1px solid #ccc; /* Border around each card */
+  padding: 20px; /* Padding inside each card */
+  background-color: #f9f9f9; /* Background color of each card */
+  text-align: center; /* Centers the text and content within the card */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease-in-out; /* Smooth transform effect for interactions */
+}
+
+.viewer:hover {
+  transform: translateY(
+    -5px
+  ); /* Slightly raise the card on hover for a visual effect */
+}
+
+/* Styles for images within the cards to ensure they are sized appropriately */
+.product-image {
+  width: 100%; /* Full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space below the image */
+}
+
+/* Description and price styling for consistency */
+.description,
+.price {
+  margin-bottom: 10px; /* Space between elements */
+}
+
+/* Quantity control and buy now button styling */
+.quantity-controls,
+.buy-now-button {
+  margin-top: 10px; /* Space above the control section */
+}
+
+.quantity-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.decrement-button,
+.increment-button {
+  padding: 5px 10px; /* Padding for buttons */
+  margin: 0 5px; /* Space between buttons */
+}
+
+/* Styling for review stars for aesthetic appearance */
+.review-stars {
+  color: gold; /* Gold color for stars */
+  margin-bottom: 10px; /* Space below the stars */
+}
