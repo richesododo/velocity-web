@@ -13,7 +13,7 @@ const Products = () => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "http://54.208.65.82:5500/items/luxury"
+          "https://velocity-api-six.vercel.app/items/luxury"
         );
         setProducts(response.data);
         setLoading(false);
